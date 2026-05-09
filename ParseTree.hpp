@@ -13,7 +13,6 @@ struct Node{
 
 class ParseTree{
 private:
-    std::string arg;
     Node* root;
 
     void destroy(Node* n);
@@ -21,7 +20,7 @@ private:
     std::string inOrder(Node* n);
     std::string postOrder(Node* n);   
 public:
-    ParseTree();
+    ParseTree(const std::string& expr);
     ~ParseTree();
 
     std::string preOrder();
